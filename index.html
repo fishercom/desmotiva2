@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO: cambiá TU-DOMINIO.com por el dominio real apenas lo publiques ===== -->
+<title>No Hay Días De Tranquilidad – Des/motivados | Hardcore Punk</title>
+<meta name="description" content="Escuchá 'No Hay Días De Tranquilidad' (Remasterizado), el sencillo hardcore punk de Des/motivados, con video oficial estilo anime. Reproducilo acá y abrilo en Spotify.">
+<meta name="keywords" content="Des/motivados, No Hay Días De Tranquilidad, hardcore punk, punk argentino, Des/motivados Spotify, Des/motiva2, video musical anime punk">
+<meta name="author" content="Des/motivados">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://TU-DOMINIO.com/">
+
+<!-- Open Graph (Facebook, WhatsApp, Discord, etc.) -->
+<meta property="og:type" content="music.song">
+<meta property="og:title" content="No Hay Días De Tranquilidad – Des/motivados">
+<meta property="og:description" content="Sencillo hardcore punk de Des/motivados con video oficial estilo anime. Escuchalo en Spotify.">
+<meta property="og:url" content="https://TU-DOMINIO.com/">
+<meta property="og:image" content="https://TU-DOMINIO.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fotograma del video de No Hay Días De Tranquilidad, de Des/motivados">
+<meta property="og:locale" content="es_AR">
+<meta property="music:musician" content="Des/motivados">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="No Hay Días De Tranquilidad – Des/motivados">
+<meta name="twitter:description" content="Sencillo hardcore punk de Des/motivados con video oficial estilo anime. Escuchalo en Spotify.">
+<meta name="twitter:image" content="https://TU-DOMINIO.com/og-image.jpg">
+
+<!-- Datos estructurados para buscadores (Google puede mostrar esto como rich result) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicRecording",
+  "name": "No Hay Días De Tranquilidad (Remastered)",
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Des/motivados",
+    "genre": "Hardcore Punk"
+  },
+  "genre": "Hardcore Punk",
+  "inLanguage": "es",
+  "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022f4e1972a51c21bb9e6c28a3",
+  "url": "https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx",
+  "potentialAction": {
+    "@type": "ListenAction",
+    "target": "https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx"
+  }
+}
+</script>
+<!-- ===== fin bloque SEO ===== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+<style>
+  /* Palette pulled from the video itself: the cool rain-walk scene
+     (ink/teal) against the warm neon studio scene (amber/violet).
+     Committed single dark world, like the clip — a light variant would
+     fight the footage's own grading. */
+  :root {
+    --ink: #0B0E13;
+    --panel: #131A22;
+    --panel-line: rgba(244, 239, 230, 0.1);
+    --teal: #3E7C8A;
+    --amber: #E8A23C;
+    --violet: #C25FE0;
+    --red: #E23B3F;
+    --foil: #F4EFE6;
+    --foil-soft: #A9B6BC;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 18px;
+    background: var(--ink);
+    color: var(--foil);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  }
+
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .stage {
+    position: relative;
+    width: min(520px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .stage {
+      animation: rise 0.6s cubic-bezier(0.2, 0.85, 0.25, 1) both;
+    }
+    .stage.hit {
+      animation: shake 0.28s linear;
+    }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-3px, 2px); }
+    40% { transform: translate(3px, -1px); }
+    60% { transform: translate(-2px, 1px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  .hero {
+    position: relative;
+    aspect-ratio: 864 / 496;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--panel);
+    box-shadow:
+      0 30px 70px -24px rgba(0, 0, 0, 0.75),
+      0 0 0 1px var(--panel-line);
+  }
+
+  .hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.04);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero video {
+      animation: kenburns 14s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes kenburns {
+    from { transform: scale(1.04) translate(0, 0); }
+    to { transform: scale(1.12) translate(-1%, -1%); }
+  }
+
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top, rgba(8, 10, 14, 0.95) 0%, rgba(8, 10, 14, 0.5) 32%, rgba(8, 10, 14, 0) 58%),
+      linear-gradient(to bottom, rgba(8, 10, 14, 0.65) 0%, rgba(8, 10, 14, 0) 26%);
+  }
+
+  .hero-top {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px 5px 8px;
+    border-radius: 999px;
+    background: rgba(11, 14, 19, 0.55);
+    backdrop-filter: blur(6px);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 8px 1px color-mix(in srgb, var(--amber) 85%, transparent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .badge::before {
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.72); }
+  }
+
+  .chips {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .chip {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(11, 14, 19, 0.55);
+    backdrop-filter: blur(6px);
+    border: 1px solid currentColor;
+  }
+
+  .chip--a { color: var(--amber); }
+  .chip--b { color: var(--violet); }
+
+  .hero-bottom {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index: 1;
+  }
+
+  .title {
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: clamp(28px, 8vw, 42px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
+  }
+
+  .artist {
+    margin: 6px 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--foil-soft);
+  }
+
+  .deck {
+    position: relative;
+    background: color-mix(in srgb, var(--panel) 94%, transparent);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--panel-line);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 20px 50px -22px rgba(0, 0, 0, 0.7);
+  }
+
+  .frame {
+    line-height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--ink);
+  }
+
+  .frame iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .frame iframe:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: -3px;
+  }
+
+  .deck-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 12px;
+    padding: 0 4px;
+  }
+
+  .deck-foot span {
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    color: var(--foil-soft);
+  }
+
+  .deck-foot a {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--amber);
+    text-decoration: none;
+    border-bottom: 1.5px solid currentColor;
+    padding-bottom: 1px;
+  }
+
+  .deck-foot a:hover,
+  .deck-foot a:focus-visible {
+    color: var(--violet);
+  }
+
+  .deck-foot a:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 3px;
+  }
+
+  .blurb {
+    max-width: 46ch;
+    margin: 2px 4px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--foil-soft);
+  }
+
+  .blurb strong {
+    color: var(--foil);
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<canvas class="bg" id="bg" aria-hidden="true"></canvas>
+
+<div class="stage">
+  <div class="hero">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="nohaydiasprev.mp4" type="video/mp4">
+    </video>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-top">
+      <span class="badge">Reproduciendo</span>
+      <div class="chips">
+        <span class="chip chip--a">Anime MV</span>
+        <span class="chip chip--b">Hardcore Punk</span>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <h1 class="title">No Hay Días De Tranquilidad</h1>
+      <p class="artist">Des/motivados</p>
+    </div>
+  </div>
+
+  <section class="deck">
+    <div class="frame">
+      <iframe
+        title="Reproductor de Spotify: No Hay Días De Tranquilidad, de Des/motivados"
+        data-testid="embed-iframe"
+        src="https://open.spotify.com/embed/track/4W74JTIP0JgzFu7YPqp4Mx?utm_source=generator&si=2f4529f1715440ed"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="deck-foot">
+      <span>Distribución — Spotify</span>
+      <a href="https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx" target="_blank" rel="noopener">Abrir en Spotify →</a>
+    </div>
+  </section>
+
+  <p class="blurb"><strong>No Hay Días De Tranquilidad</strong> (Remasterizado) es el nuevo sencillo hardcore punk de <strong>Des/motivados</strong>, acompañado de un video oficial con estética anime. Escuchalo completo en Spotify.</p>
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('bg');
+  var ctx = canvas.getContext('2d');
+  var stage = document.querySelector('.stage');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var SCALE = 0.24;
+  var W, H;
+  function resize() {
+    W = canvas.width = Math.max(64, Math.round(window.innerWidth * SCALE));
+    H = canvas.height = Math.max(64, Math.round(window.innerHeight * SCALE));
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var blobs = [
+    { hex: '#3E7C8A', rx: 0.30, ry: 0.30, speed: 0.00016, phase: 0.0, radius: 0.6 },
+    { hex: '#E8A23C', rx: 0.30, ry: 0.26, speed: 0.00024, phase: 2.1, radius: 0.48 },
+    { hex: '#C25FE0', rx: 0.27, ry: 0.32, speed: 0.00028, phase: 4.0, radius: 0.46 }
+  ];
+
+  var flashColors = ['#E23B3F', '#E8A23C', '#C25FE0'];
+  var sparkColors = ['#E23B3F', '#E8A23C', '#F4EFE6'];
+
+  var seed = 7;
+  function rand() {
+    seed = (seed * 9301 + 49297) % 233280;
+    return seed / 233280;
+  }
+
+  function makeSpark() {
+    var ang = -Math.PI / 2 + (rand() - 0.5) * 1.6;
+    var spd = 0.00022 + rand() * 0.00042;
+    return {
+      x: 0.5 + (rand() - 0.5) * 0.7,
+      y: 0.62 + rand() * 0.3,
+      vx: Math.cos(ang) * spd,
+      vy: Math.sin(ang) * spd,
+      size: 0.9 + rand() * 1.6,
+      hex: sparkColors[(rand() * sparkColors.length) | 0],
+      maxLife: 900 + rand() * 900,
+      life: 0
+    };
+  }
+
+  var sparks = [];
+  for (var i = 0; i < 22; i++) {
+    var s = makeSpark();
+    s.life = rand() * s.maxLife;
+    sparks.push(s);
+  }
+
+  var lastT = null;
+  var nextFlash = 2600 + rand() * 2600;
+  var flashClock = 0;
+
+  function frame(t) {
+    if (lastT === null) lastT = t;
+    var dt = Math.min(48, t - lastT);
+    lastT = t;
+
+    // trailing fade instead of a hard clear — leaves short light-trails
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = 'rgba(11, 14, 19, 0.3)';
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.globalCompositeOperation = 'lighter';
+    blobs.forEach(function (b) {
+      var cx = (0.5 + b.rx * Math.sin(t * b.speed + b.phase)) * W;
+      var cy = (0.5 + b.ry * Math.cos(t * b.speed * 0.85 + b.phase)) * H;
+      var r = b.radius * Math.max(W, H);
+      var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+      g.addColorStop(0, b.hex + '55');
+      g.addColorStop(1, b.hex + '00');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, W, H);
+    });
+
+    if (!reduced) {
+      // stage-light strobe hit, on an irregular punk-show clock
+      flashClock += dt;
+      if (flashClock >= nextFlash) {
+        flashClock = 0;
+        nextFlash = 2600 + rand() * 3400;
+        var fc = flashColors[(rand() * flashColors.length) | 0];
+        ctx.fillStyle = fc + '4A';
+        ctx.fillRect(0, 0, W, H);
+        if (stage) {
+          stage.classList.remove('hit');
+          void stage.offsetWidth;
+          stage.classList.add('hit');
+        }
+      }
+
+      sparks.forEach(function (p) {
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.life += dt;
+        if (p.life > p.maxLife || p.y < -0.05) {
+          var fresh = makeSpark();
+          p.x = fresh.x; p.y = fresh.y; p.vx = fresh.vx; p.vy = fresh.vy;
+          p.size = fresh.size; p.hex = fresh.hex; p.maxLife = fresh.maxLife; p.life = 0;
+        }
+        var a = 1 - p.life / p.maxLife;
+        ctx.beginPath();
+        ctx.fillStyle = p.hex + Math.round(Math.max(0, a) * 255).toString(16).padStart(2, '0');
+        ctx.arc(p.x * W, p.y * H, p.size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    if (!reduced) requestAnimationFrame(frame);
+  }
+
+  if (reduced) {
+    ctx.fillStyle = '#0B0E13';
+    ctx.fillRect(0, 0, W, H);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
