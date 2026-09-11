@@ -238,6 +238,45 @@
     right: 16px;
     bottom: 14px;
     z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .sound-btn {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 14, 19, 0.55);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--panel-line);
+    color: var(--foil);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .sound-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .sound-btn svg.is-off {
+    display: none;
+  }
+
+  .sound-btn:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+  }
+
+  .sound-btn:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
   }
 
   .title {
@@ -342,7 +381,7 @@
 
 <div class="stage">
   <div class="hero">
-    <video autoplay muted loop playsinline preload="auto">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto">
       <source src="nohaydiasprev.mp4" type="video/mp4">
     </video>
     <div class="hero-scrim" aria-hidden="true"></div>
@@ -354,8 +393,22 @@
       </div>
     </div>
     <div class="hero-bottom">
-      <h1 class="title">No Hay Días De Tranquilidad</h1>
-      <p class="artist">Des/motivados</p>
+      <div>
+        <h1 class="title">No Hay Días De Tranquilidad</h1>
+        <p class="artist">Des/motivados</p>
+      </div>
+      <button class="sound-btn" id="soundBtn" type="button" aria-pressed="false" aria-label="Activar sonido">
+        <svg id="iconMuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H3v6h3l5 4V5Z"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <svg id="iconOn" class="is-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H3v6h3l5 4V5Z"/>
+          <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+          <path d="M18.5 6a9 9 0 0 1 0 12"/>
+        </svg>
+      </button>
     </div>
   </div>
 
@@ -382,6 +435,23 @@
 </div>
 
 <script>
+(function () {
+  var video = document.getElementById('heroVideo');
+  var soundBtn = document.getElementById('soundBtn');
+  var iconMuted = document.getElementById('iconMuted');
+  var iconOn = document.getElementById('iconOn');
+
+  soundBtn.addEventListener('click', function () {
+    video.muted = !video.muted;
+    if (!video.muted) { video.play().catch(function () {}); }
+    var unmuted = !video.muted;
+    soundBtn.setAttribute('aria-pressed', String(unmuted));
+    soundBtn.setAttribute('aria-label', unmuted ? 'Silenciar' : 'Activar sonido');
+    iconMuted.classList.toggle('is-off', unmuted);
+    iconOn.classList.toggle('is-off', !unmuted);
+  });
+})();
+
 (function () {
   var canvas = document.getElementById('bg');
   var ctx = canvas.getContext('2d');
