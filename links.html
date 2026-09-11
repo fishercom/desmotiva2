@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Des/motivados — Links</title>
+<meta name="description" content="Todos los links de Des/motivados: escuchá 'No Hay Días De Tranquilidad' y seguí a la banda.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nohaydiasdetranquilidad.deepsoft.lat/links">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<style>
+  :root {
+    --ink: #0B0E13;
+    --panel: #131A22;
+    --panel-line: rgba(244, 239, 230, 0.1);
+    --amber: #E8A23C;
+    --violet: #C25FE0;
+    --foil: #F4EFE6;
+    --foil-soft: #A9B6BC;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 20px;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(194, 95, 224, 0.16) 0%, transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(232, 162, 60, 0.14) 0%, transparent 45%),
+      var(--ink);
+    color: var(--foil);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  }
+
+  .wrap {
+    width: min(420px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--panel-line);
+    box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
+  }
+
+  .avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .name {
+    margin: 18px 0 2px;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+  }
+
+  .tagline {
+    margin: 0 0 34px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--foil-soft);
+    text-align: center;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--panel) 92%, transparent);
+    border: 1px solid var(--panel-line);
+    color: var(--foil);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: border-color 0.15s ease, transform 0.1s ease;
+  }
+
+  .link:hover {
+    border-color: var(--amber);
+  }
+
+  .link:active {
+    transform: scale(0.98);
+  }
+
+  .link:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  .link .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+  }
+
+  .link--main .dot { background: var(--amber); box-shadow: 0 0 10px 1px color-mix(in srgb, var(--amber) 80%, transparent); }
+  .link--spotify .dot { background: #1DB954; box-shadow: 0 0 10px 1px rgba(29, 185, 84, 0.7); }
+
+  .link .label {
+    flex: 1;
+  }
+
+  .link .arrow {
+    color: var(--foil-soft);
+    font-weight: 500;
+  }
+
+  .foot {
+    margin-top: 40px;
+    font-size: 11px;
+    color: var(--foil-soft);
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="avatar">
+    <img src="og-image.jpg" alt="Des/motivados">
+  </div>
+  <h1 class="name">Des/motivados</h1>
+  <p class="tagline">Hardcore Punk — Nuevo sencillo: "No Hay Días De Tranquilidad"</p>
+
+  <div class="links">
+    <a class="link link--main" href="https://nohaydiasdetranquilidad.deepsoft.lat/">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="label">Escuchar y ver el video</span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="link link--spotify" href="https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx" target="_blank" rel="noopener">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="label">Escuchar en Spotify</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <p class="foot">Des/motivados © 2026</p>
+</div>
+
+</body>
+</html>
