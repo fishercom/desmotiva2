@@ -2,56 +2,88 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Des/motivados — Links</title>
-<meta name="description" content="Todos los links de Des/motivados: escuchá 'No Hay Días De Tranquilidad' y seguí a la banda.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Des/motivados — Enlaces Oficiales & Música</title>
+<meta name="description" content="Todos los enlaces oficiales de Des/motivados. Escuchá 'No Hay Días De Tranquilidad' en Spotify y YouTube. Mirá el video oficial y conocé a la banda.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nohaydiasdetranquilidad.deepsoft.lat/links">
 
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Des/motivados — Bio Links Oficiales">
+<meta property="og:description" content="Escuchá 'No Hay Días De Tranquilidad' en Spotify y YouTube. Todos los enlaces de Des/motivados.">
+<meta property="og:url" content="https://nohaydiasdetranquilidad.deepsoft.lat/links">
+<meta property="og:image" content="https://nohaydiasdetranquilidad.deepsoft.lat/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Des/motivados — Bio Links">
+<meta name="twitter:description" content="Escuchá 'No Hay Días De Tranquilidad' en Spotify y YouTube.">
+<meta name="twitter:image" content="https://nohaydiasdetranquilidad.deepsoft.lat/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --ink: #0B0E13;
-    --panel: #131A22;
-    --panel-line: rgba(244, 239, 230, 0.1);
-    --amber: #E8A23C;
-    --violet: #C25FE0;
-    --foil: #F4EFE6;
-    --foil-soft: #A9B6BC;
+    --ink-dark: #07090D;
+    --ink: #0B0E14;
+    --panel: #121722;
+    --panel-line: rgba(244, 239, 230, 0.12);
+    --amber: #F2A53B;
+    --violet: #C45FE0;
+    --spotify: #1DB954;
+    --spotify-glow: rgba(29, 185, 84, 0.35);
+    --youtube: #FF0000;
+    --youtube-glow: rgba(255, 0, 0, 0.35);
+    --foil: #F5F1E9;
+    --foil-soft: #A8B7BE;
+    --foil-dim: #6F818A;
+    --font-heading: "Syne", "Zen Kaku Gothic New", sans-serif;
+    --font-body: "Zen Kaku Gothic New", sans-serif;
   }
 
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
-    min-height: 100dvh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 56px 20px;
+    padding: 48px 20px;
     background:
-      radial-gradient(circle at 20% 10%, rgba(194, 95, 224, 0.16) 0%, transparent 45%),
-      radial-gradient(circle at 85% 80%, rgba(232, 162, 60, 0.14) 0%, transparent 45%),
-      var(--ink);
+      radial-gradient(circle at 15% 15%, rgba(196, 95, 224, 0.18) 0%, transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(242, 165, 59, 0.15) 0%, transparent 45%),
+      var(--ink-dark);
     color: var(--foil);
-    font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+    font-family: var(--font-body);
   }
 
   .wrap {
-    width: min(420px, 100%);
+    width: min(440px, 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
   .avatar {
-    width: 88px;
-    height: 88px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid var(--panel-line);
-    box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--amber);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 24px rgba(242, 165, 59, 0.25);
+    transition: transform 0.2s ease;
+  }
+
+  .avatar:hover {
+    transform: scale(1.04);
   }
 
   .avatar img {
@@ -62,19 +94,38 @@
   }
 
   .name {
-    margin: 18px 0 2px;
-    font-weight: 900;
+    margin: 18px 0 4px;
+    font-family: var(--font-heading);
+    font-weight: 800;
     font-size: 26px;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
   }
 
   .tagline {
-    margin: 0 0 34px;
+    margin: 0 0 22px;
     font-size: 13px;
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     color: var(--foil-soft);
     text-align: center;
+    line-height: 1.4;
+  }
+
+  .single-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: rgba(242, 165, 59, 0.12);
+    border: 1px solid rgba(242, 165, 59, 0.3);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--amber);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   .links {
@@ -87,57 +138,140 @@
   .link {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
-    padding: 16px 18px;
+    padding: 15px 18px;
     border-radius: 14px;
-    background: color-mix(in srgb, var(--panel) 92%, transparent);
+    background: var(--panel);
     border: 1px solid var(--panel-line);
     color: var(--foil);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 700;
     letter-spacing: 0.01em;
-    transition: border-color 0.15s ease, transform 0.1s ease;
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.25, 1);
   }
 
   .link:hover {
     border-color: var(--amber);
+    transform: translateY(-2px);
+    background: #182030;
   }
 
   .link:active {
     transform: scale(0.98);
   }
 
-  .link:focus-visible {
-    outline: 2px solid var(--amber);
-    outline-offset: 3px;
+  .link--spotify {
+    background: rgba(29, 185, 84, 0.1);
+    border-color: rgba(29, 185, 84, 0.4);
   }
 
-  .link .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex: 0 0 auto;
+  .link--spotify:hover {
+    border-color: var(--spotify);
+    box-shadow: 0 4px 20px var(--spotify-glow);
+    background: rgba(29, 185, 84, 0.18);
   }
 
-  .link--main .dot { background: var(--amber); box-shadow: 0 0 10px 1px color-mix(in srgb, var(--amber) 80%, transparent); }
-  .link--spotify .dot { background: #1DB954; box-shadow: 0 0 10px 1px rgba(29, 185, 84, 0.7); }
+  .link--youtube {
+    background: rgba(255, 0, 0, 0.08);
+    border-color: rgba(255, 0, 0, 0.3);
+  }
 
-  .link .label {
+  .link--youtube:hover {
+    border-color: var(--youtube);
+    box-shadow: 0 4px 20px var(--youtube-glow);
+    background: rgba(255, 0, 0, 0.16);
+  }
+
+  .link-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .link-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  .link--spotify .link-icon svg {
+    fill: var(--spotify);
+  }
+
+  .link--youtube .link-icon svg {
+    fill: var(--youtube);
+  }
+
+  .link .label-group {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link .label-main {
+    font-size: 14.5px;
+    font-weight: 700;
+  }
+
+  .link .label-sub {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--foil-soft);
   }
 
   .link .arrow {
     color: var(--foil-soft);
+    font-size: 16px;
     font-weight: 500;
+    transition: transform 0.15s ease;
+  }
+
+  .link:hover .arrow {
+    transform: translateX(3px);
+    color: #fff;
   }
 
   .foot {
-    margin-top: 40px;
+    margin-top: 36px;
+    font-size: 12px;
+    color: var(--foil-dim);
+    letter-spacing: 0.03em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .foot a {
+    color: var(--foil-soft);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .foot a:hover {
+    color: var(--amber);
+  }
+
+  .foot .developer-badge {
     font-size: 11px;
     color: var(--foil-soft);
-    letter-spacing: 0.03em;
+    margin-top: 4px;
+  }
+
+  .foot .developer-badge a {
+    color: var(--amber);
+    font-weight: 700;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+  }
+
+  .foot .developer-badge a:hover {
+    color: #fff;
   }
 </style>
 </head>
@@ -148,22 +282,70 @@
     <img src="og-image.jpg" alt="Des/motivados">
   </div>
   <h1 class="name">Des/motivados</h1>
-  <p class="tagline">Hardcore Punk — Nuevo sencillo: "No Hay Días De Tranquilidad"</p>
+  <p class="tagline">Pop Punk • Melodic Hardcore • Anime Rock</p>
+  <span class="single-badge">⚡ Nuevo Sencillo Oficial</span>
 
   <div class="links">
-    <a class="link link--main" href="https://nohaydiasdetranquilidad.deepsoft.lat/">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="label">Escuchar y ver el video</span>
+    <!-- Spotify Single Link -->
+    <a class="link link--spotify" href="https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      </div>
+      <div class="label-group">
+        <span class="label-main">Escuchar en Spotify</span>
+        <span class="label-sub">No Hay Días De Tranquilidad (Remastered)</span>
+      </div>
       <span class="arrow">→</span>
     </a>
-    <a class="link link--spotify" href="https://open.spotify.com/track/4W74JTIP0JgzFu7YPqp4Mx" target="_blank" rel="noopener">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="label">Escuchar en Spotify</span>
+
+    <!-- YouTube Single Link -->
+    <a class="link link--youtube" href="https://www.youtube.com/watch?v=3yT6pTGbpTk" target="_blank" rel="noopener">
+      <div class="link-icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="label-group">
+        <span class="label-main">Escuchar en YouTube</span>
+        <span class="label-sub">Audio Oficial Remastered en YouTube</span>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- Landing Page Link -->
+    <a class="link" href="https://nohaydiasdetranquilidad.deepsoft.lat/">
+      <div class="link-icon" style="color: var(--amber);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </div>
+      <div class="label-group">
+        <span class="label-main">Landing Oficial del Sencillo</span>
+        <span class="label-sub">Video Anime, Letra Oficial Completa & Ficha</span>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <!-- Artist Spotify Profile -->
+    <a class="link" href="https://open.spotify.com/artist/13Z6Uh9c5eusTTlfWyv4k7" target="_blank" rel="noopener">
+      <div class="link-icon" style="color: var(--violet);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 18V5l12-2v13"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="16" r="3"/>
+        </svg>
+      </div>
+      <div class="label-group">
+        <span class="label-main">Perfil de Des/motivados en Spotify</span>
+        <span class="label-sub">Sigue a la banda para nuevos lanzamientos</span>
+      </div>
       <span class="arrow">→</span>
     </a>
   </div>
 
-  <p class="foot">Des/motivados © 2026</p>
+  <div class="foot">
+    <a href="https://nohaydiasdetranquilidad.deepsoft.lat/">nohaydiasdetranquilidad.deepsoft.lat</a>
+    <span>Des/motivados © 2026</span>
+    <span class="developer-badge">Desarrollado por <a href="https://deepsoft.lat" target="_blank" rel="noopener">deepsoft.lat</a></span>
+  </div>
 </div>
 
 </body>
